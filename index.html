@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>AppStack Home</title>
+		<style>
+			body{
+				margin: 0px;
+				border: 0px;
+				background: #2ECC71;
+			}
+			#header {
+				height: 50px;
+				background: #2ECC71;
+			}
+			#sidebar {
+				width: 20%;
+				height: 400px;
+				background: #27AE60;
+				float: left;
+				border-top: 3px solid black;
+				border-bottom: 3px solid black;
+				border-right: 3px solid black;
+			}
+			#data {
+				height: 700px;
+				background: #2ECC71;
+				padding-left: 25%;
+				padding-right: 5%;
+			}
+			ul {
+				font-size: 0;
+				margin: 0px;
+				float: left;
+			}
+			ul li {
+				height: 199px;
+				font-size: 16px;
+			}
+			#admin {
+				border-bottom: 1px solid black;
+			}
+			ul li:hover {
+				color: white;
+				background: #2ECC71;
+			}
+			th {
+				padding: 5px;
+			}
+			table {
+				border: 3px solid black;
+				background: #BDC3C7;
+			}
+			#left-bor{
+				border-right: 3px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+
+                </div>
+		<div id="sidebar">
+			<ul>
+				<a href= "admin.html" style="color: black; text-decoration: none"><li id="admin">Admin Page</li></a>
+				<a href= "form.html"  style="color: black; text-decoration: none"><li>App Request Form</li></a>
+			</ul>
+                </div>
+
+		<div id="data">
+			<center>
+				<table class="freeze-table" width="100%">
+					<thead>
+						<tr>
+							<th id="left-bor" class="col-name fixed-header">App Name</th>
+							<th id="left-bor" class="col-desc fixed-header">Description</th>
+							<th id="left-bor" class="col-org fixed-header">Organization</th>
+							<th id="left-bor" class="col-plat-vers fixed-header">Platforms and Versions</th>
+							<th id="left-bor" class="col-link fixed-header">Link</th>
+							<th class="col-price fixed-header">Price</th>
+
+						</tr>
+					</thead>
+				</table>
+			</center>
+                </div>
+	</body>
+</html>
