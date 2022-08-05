@@ -3,10 +3,124 @@
 	<head>
 		<title>AppStack Home</title>
 <script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+/* Lines 14 through 22 are from 
+ * W3Schools
+ * 8/5/2022
+ * How To - Pop Up Form
+ * JavaScript
+ * source code
+ * https://www.w3schools.com/howto/howto_js_popup_form.asp
+ */
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+/* Lines 31 through 83 are from 
+ * W3Schools
+ * 8/5/2022
+ * How To - Sort a Table
+ * JavaScript
+ * source code
+ * https://www.w3schools.com/howto/howto_js_sort_table.asp
+ */
+function sortTable(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("table");
+	switching = true;
+	// Set the sorting direction to ascending:
+	dir = "asc";
+	/* Make a loop that will continue until
+	no switching has been done: */
+	while (switching) {
+		// Start by saying: no switching is done:
+		switching = false;
+		rows = table.rows;
+		/* Loop through all table rows (except the
+		first, which contains table headers): */
+		for (i = 1; i < (rows.length - 1); i++) {
+			// Start by saying there should be no switching:
+			shouldSwitch = false;
+			/* Get the two elements you want to compare,
+			one from current row and one from the next: */
+			x = rows[i].getElementsByTagName("td")[n];
+			y = rows[i + 1].getElementsByTagName("td")[n];
+			/* Check if the two rows should switch place,
+			based on the direction, asc or desc: */
+			if (dir == "asc") {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+				}
+			} else if (dir == "desc") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+				}
+			}
+		} if (shouldSwitch) {
+			/* If a switch has been marked, make the switch
+			and mark that a switch has been done: */
+		rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		switching = true;
+		// Each time a switch is done, increase this count by 1:
+		switchcount ++;
+			} else {
+			/* If no switching has been done AND the direction is "asc",
+			set the direction to "desc" and run the while loop again. */
+				if (switchcount == 0 && dir == "asc") {
+					dir = "desc";
+					switching = true;
+				}
+			}
+	}
+};
+
+/* Lines 93 through 111 are from 
+ * W3Schools
+ * 8/5/2022
+ * How To - Filter/Search Table
+ * JavaScript
+ * source code
+ * https://www.w3schools.com/howto/howto_js_filter_table.asp
+ */
+function search() {
+	// Declare variables
+	var input, filter, table, td, i, txtValue;
+	input = document.getElementById("search");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("table");
+	const tr = table.getElementsByTagName("tr");
+
+	//Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		txtValue = td.textContent || td.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			td.style.display = "";
+		} else {
+			td.style.display = "none";
+		}
+	}
+};
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 </script>
-		<style>
+<style>
+
+/* Lines 124 through 230 are from 
+ * W3Schools
+ * 8/5/2022
+ * How To - Pop Up Form
+ * JavaScript
+ * source code
+ * https://www.w3schools.com/howto/howto_js_popup_form.asp
+ */
 * {box-sizing: border-box}
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -115,6 +229,16 @@ hr {
 				  }
 			  }
 
+
+/* Lines 242 through 250 are from 
+ * W3Schools
+ * 8/5/2022
+ * How To - Filter/Search Table
+ * JavaScript
+ * source code
+ * https://www.w3schools.com/howto/howto_js_filter_table.asp
+ */
+
 			  #search {
 				  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
 				  background-position: 10px 12px; /* Position the search icon */
@@ -181,6 +305,15 @@ hr {
 	</head>
 	<body>
 		<div id="header">
+		
+		/* Lines 317 through 350 are from 
+		 * W3Schools
+		 * 8/5/2022
+		 * How To - Pop Up Form
+		 * JavaScript
+		 * source code
+		 * https://www.w3schools.com/howto/howto_js_popup_form.asp
+		 */
 			<!-- Button to open the modal -->
 			<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
 			<br>
