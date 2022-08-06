@@ -77,7 +77,7 @@ namespace Project201
          */
         private void contact_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new AccountContactPage());
         }
     }
 }
