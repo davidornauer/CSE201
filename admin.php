@@ -2,6 +2,8 @@
 <html>
 	<head>
 	<style>
+		<!-- the hide class, body, and elements with the ID of pass or res
+		have their style dictated here -->
 		.hide {
 			display: none;
 		}
@@ -20,16 +22,21 @@
 		}
 	</style>
 	<script>
+		<!-- function allowing administrators to see the webpage elements
+		if the correct password is submitted -->
 		function submit() {
     			var pw = document.getElementById('password').value;
     			var form = document.getElementById('pass');
 			var menu = document.getElementById('menu');
 			var result = document.getElementById('res');
     			if(pw == 'admin') {
+			    <!-- allows users to see the menu and form results from form.html
+			    if administrative password is submitted -->
     			    menu.className = "";
 			    form.className = "hide";
 			    result.className = "";
     			}else {
+			    <!-- hides the menu and results of the form from form.html -->
 			    menu.className = "hide";
 			    result.className = "hide";
     			}
