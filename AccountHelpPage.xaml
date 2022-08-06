@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project201.AccountHelpPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Label Text="If you need any help, please look at contact information page and contact us."/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

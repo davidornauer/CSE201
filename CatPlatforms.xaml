@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project201.CatPlatforms">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand" Margin="8" Spacing="5" Orientation="Horizontal" HeightRequest="35">
+                <Entry Placeholder="Enter the Platforms" WidthRequest="200" FontSize="10"/>
+                <ImageButton Source="img/seach.png"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="LightGray" HeightRequest="600">
+                <Label Text="  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------" 
+                       TextColor="White"/>
+                <Label Text="  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------" 
+                       TextColor="White"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Spacing="30" HorizontalOptions="CenterAndExpand" >
+            <Button Text="Home" TextColor="Black"  CornerRadius="30"  Clicked="homebt_Clicked" BorderColor="Black" BackgroundColor="White"
+                x:Name="homebt"/>
+            <Button Text="Catalogue" TextColor="White"  CornerRadius="30" Clicked="catbt_Clicked" BorderColor="Black" 
+                x:Name="catbt" BackgroundColor="Black"/>
+            <Button Text="Account" TextColor="Black"  CornerRadius="30" Clicked="accountbt_Clicked" BorderColor="Black" 
+                x:Name="accountbt" BackgroundColor="White"/>
+
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project201.AccountAboutPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Label Text="App Name: App Stack"/>
+            <Label Text="Create By: Team 4 (David Dornauer, Sirui Lin, Kenna Skoczen)" />
+            <Label Text="Course: CSE 201" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project201.Account">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="topGrid" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+                <StackLayout VerticalOptions="StartAndExpand"  Orientation="Horizontal" HeightRequest="50" Margin="5">
+                    <ImageButton Source="img/user.jpg"></ImageButton>
+                    <Button Text="Login in" Grid.Column="1" />
+                    <Button Text="Sign Up" Grid.Column="2" />
+                </StackLayout>
+            </Grid>
+            
+            <StackLayout Orientation="Horizontal" Spacing="10" HeightRequest="40" Margin="2">
+                    <Label Text="Contact Information" TextColor="Green" Padding="6"/>
+                    <ImageButton Source="img/arrow.png" x:Name="contact" Clicked="contact_Clicked" />
+             </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="40" Margin="2">
+                <Label Text="Help" TextColor="Green" Padding="6"/>
+                <ImageButton Source="img/arrow.png" x:Name="help" Clicked="help_Clicked" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10"  HeightRequest="40" Margin="2">
+                <Label Text="About" TextColor="Green" Padding="6" />
+                <ImageButton Source="img/arrow.png" x:Name="about" Clicked="about_Clicked" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Spacing="30" HorizontalOptions="CenterAndExpand" >
+                <Button Text="Home" TextColor="Black"  CornerRadius="30"  Clicked="homebt_Clicked" BorderColor="Black" BackgroundColor="White"
+                        x:Name="homebt"/>
+                <Button Text="Catalogue" TextColor="Black"  CornerRadius="30" Clicked="catbt_Clicked" BorderColor="Black" 
+                        x:Name="catbt" BackgroundColor="White"/>
+                <Button Text="Account" TextColor="Black"  CornerRadius="30" Clicked="accountbt_Clicked" BorderColor="Black" 
+                        x:Name="accountbt" BackgroundColor="White"/>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+
+
+
+</ContentPage>
