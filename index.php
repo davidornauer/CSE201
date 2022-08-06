@@ -16,7 +16,7 @@ var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-	if (event.target == modal) {
+	if (event.target != modal) {
 		modal.style.display = "none";
 	}
 };
@@ -238,7 +238,7 @@ hr {
  * source code
  * https://www.w3schools.com/howto/howto_js_filter_table.asp
  */
-
+			//style information for the search bar
 			  #search {
 				  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
 				  background-position: 10px 12px; /* Position the search icon */
@@ -248,15 +248,21 @@ hr {
 				  border: 1px solid #ddd; /* Add a grey border */
 				  margin-bottom: 12px; /* Add some space below the input */
 			  }
+			  
+			  // style information for the body
 			  body{
 				  margin: 0px;
 				  border: 0px;
 				  background: #2ECC71;
 			  }
+			  
+			  // style information for the header class
 			  #header {
 				  height: 50px;
 				  background: #2ECC71;
 			  }
+			  
+			  // style information for the sidebar class
 			  #sidebar {
 				  width: 20%;
 				  height: 400px;
@@ -266,35 +272,51 @@ hr {
 				  border-bottom: 3px solid black;
 				  border-right: 3px solid black;
 			  }
+			  
+			  // style information for the data class
 			  #data {
 				  height: 700px;
 				  background: #2ECC71;
 				  padding-left: 25%;
 				  padding-right: 5%;
 			  }
+			  
+			  // style information for the unordered list			  
 			  ul {
 				  font-size: 0;
 				  margin: 0px;
 				  float: left;
 			  }
+			  
+			  // style information for list items
 			  ul li {
 				  height: 199px;
 				  font-size: 16px;
 			  }
+			  
+			  //style information for the admin class
 			  #admin {
 				  border-bottom: 1px solid black;
 			  }
+			  
+			  //style information for hover over list items
 			  ul li:hover {
 				  color: white;
 				  background: #2ECC71;
 			  }
+			  
+			  //style information for the table headers
 			  th {
 				  padding: 5px;
 			  }
+			  
+			  //style information for the table
 			  table {
 				  border: 3px solid black;
 				  background: #BDC3C7;
 			  }
+			  
+			  //style information to set up a dividing line between table columns
 			  #left-bor{
 				  border-right: 3px solid black;
 			  }
@@ -306,14 +328,15 @@ hr {
 	<body>
 		<div id="header">
 		
-		/* Lines 317 through 350 are from 
-		 * W3Schools
-		 * 8/5/2022
-		 * How To - Pop Up Form
-		 * JavaScript
-		 * source code
-		 * https://www.w3schools.com/howto/howto_js_popup_form.asp
-		 */
+		<!--
+		Lines 317 through 350 are from 
+		W3Schools
+		8/5/2022
+		How To - Pop Up Form
+		JavaScript
+		source code
+		https://www.w3schools.com/howto/howto_js_popup_form.asp
+		-->
 			<!-- Button to open the modal -->
 			<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
 			<br>
@@ -352,6 +375,7 @@ hr {
 		<br>
 		<br>
 		<div id="sidebar">
+		<!-- this div contains links to the respective pages -->
 			<ul>
 				<a href= "admin.php" style="color: black; text-decoration: none"><li id="admin">Admin Page</li></a>
 				<a href= "form.html"  style="color: black; text-decoration: none"><li>App Request Form</li></a>
@@ -359,6 +383,7 @@ hr {
 		</div>
 
 		<div id="data">
+		<!-- this div contains the search box and table information -->
 			<center>
 				<input type="text" id="search" onkeyup="search();" placeholder="Search table...">
 				<table id="table" class="freeze-table" width="100%">
